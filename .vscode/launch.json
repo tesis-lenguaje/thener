@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'thener'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=thener",
+                    "--package=thener",
+
+                ],
+                "filter": {
+                    "name": "thener",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "./example/project.thn"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'thener'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=thener",
+                    "--package=thener"
+                ],
+                "filter": {
+                    "name": "thener",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

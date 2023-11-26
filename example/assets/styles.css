@@ -1,0 +1,10 @@
+body {
+    background: #f8d7d7;
+    color: #2b5a7e;
+}
+
+@media print {
+    body {
+        margin: 0;
+    }
+}
